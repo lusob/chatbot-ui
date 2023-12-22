@@ -1,9 +1,5 @@
 # Chatbot UI
 
-## News
-
-V2 update coming soon...
-
 ## About
 
 Chatbot UI is an open source chat UI for AI models.
