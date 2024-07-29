@@ -13,11 +13,12 @@ export enum OpenAIModelID {
   GPT_4 = 'gpt-4',
   GPT_4_32K = 'gpt-4-32k',
   GPT_4_TURBO = 'gpt-4-1106-preview',
-  GPT_4_O = 'gpt-4o'
+  GPT_4_O = 'gpt-4o',
+  GPT_4_O_MINI = 'gpt-4o-mini'
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
-export const fallbackModelID = OpenAIModelID.GPT_3_5;
+export const fallbackModelID = OpenAIModelID.GPT_4_O_MINI;
 
 export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
   [OpenAIModelID.GPT_3_5]: {
@@ -55,5 +56,11 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
     name: 'GPT-4-O',
     maxLength: 380000,
     tokenLimit: 128000,
+  },
+  [OpenAIModelID.GPT_4_O_MINI]: {
+    id: OpenAIModelID.GPT_4_O_MINI,
+    name: 'GPT-4-O-MINI',
+    maxLength: 380000, // Assuming similar features to GPT-4-O
+    tokenLimit: 128000, // Assuming similar features to GPT-4-O
   },
 };
